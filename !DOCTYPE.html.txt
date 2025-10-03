@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Kỷ Niệm 10 năm chuyến Công tác tại Cộng hoà Ấn độ</title>
+    <!-- Tải Tailwind CSS để tạo giao diện nhanh và đẹp mắt -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Sử dụng font Serif (như Baskerville) để tăng tính trang trọng, cùng font Sans-serif cho nội dung dễ đọc */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap');
+        .font-serif-display {
+            font-family: 'Playfair Display', serif; /* Font Serif cho tiêu đề */
+        }
+        .font-body {
+            font-family: 'Inter', sans-serif; /* Font Sans-serif cho nội dung */
+        }
+        /* Tông màu lấy cảm hứng từ thiệp gốc (Nâu đậm và Vàng đồng) */
+        .bg-primary { background-color: #5d4037; /* Nâu đất đậm */ }
+        .text-accent { color: #dda446; /* Vàng đồng */ }
+        .bg-secondary { background-color: #efebe9; /* Be nhạt */ }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
+
+        /* Hiệu ứng di chuột và nền*/
+        .btn-rsvp:hover {
+            background-color: #c98e3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-primary font-body flex flex-col items-center justify-center p-4">
+
+    <!-- Card Thiệp Mời Chính -->
+    <div class="w-full max-w-lg md:max-w-2xl bg-secondary rounded-xl p-8 md:p-12 card-shadow mt-4 mb-8">
+        
+        <!-- Phần Hoa Văn (Tượng trưng cho Mandala) -->
+        <div class="text-center mb-8">
+            <!-- Icon hoa văn đơn giản (tùy chỉnh bằng SVG nếu cần) -->
+            <svg class="w-16 h-16 mx-auto text-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 7h2v6h-2V7zm0 8h2v2h-2v-2z"/>
+            </svg>
+            <p class="font-serif-display text-lg text-accent mt-2">Trân Trọng</p>
+        </div>
+
+        <!-- Kính Mời -->
+        <div class="text-center mb-10">
+            <h1 class="font-serif-display text-4xl md:text-5xl font-bold mb-4 text-gray-800">KÍNH MỜI</h1>
+            <div class="h-0.5 w-24 bg-accent mx-auto mb-6"></div>
+            <p class="font-serif-display text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+                Đ/c Huỳnh Xuân Sinh
+            </p>
+            <p class="text-lg md:text-xl text-gray-600 mt-1 font-body">
+                Giám đốc NM X52
+            </p>
+        </div>
+
+        <!-- Chi tiết Sự kiện -->
+        <div class="text-center mb-10 border-t border-b border-accent py-6">
+            <p class="text-sm uppercase tracking-widest text-gray-700 mb-2">Buổi Gặp Mặt Kỷ Niệm</p>
+            <p class="font-serif-display text-2xl md:text-3xl font-bold text-gray-800">
+                10 NĂM CHUYẾN CÔNG TÁC TẠI
+            </p>
+            <p class="font-serif-display text-3xl md:text-4xl font-bold text-accent mt-1">
+                CỘNG HÒA ẤN ĐỘ
+            </p>
+            <p class="text-lg text-gray-600 mt-2">(2015 - 2025)</p>
+        </div>
+
+        <!-- Thời gian và Địa điểm -->
+        <div class="space-y-6 text-center">
+            
+            <!-- Thời Gian -->
+            <div>
+                <p class="font-serif-display text-xl md:text-2xl font-bold text-gray-800 mb-1">
+                    THỜI GIAN
+                </p>
+                <p class="text-2xl md:text-3xl font-extrabold text-accent">
+                    18 GIỜ 00
+                </p>
+                <p class="text-base text-gray-700">
+                    THỨ BẢY, NGÀY 18 THÁNG 10 NĂM 2025
+                </p>
+            </div>
+
+            <!-- Địa Điểm -->
+            <div>
+                <p class="font-serif-display text-xl md:text-2xl font-bold text-gray-800 mb-1">
+                    ĐỊA ĐIỂM
+                </p>
+                <p class="text-xl md:text-2xl font-bold text-accent mb-1">
+                    NHÀ HÀNG GIA VIÊN
+                </p>
+                <p class="text-base text-gray-700 leading-relaxed">
+                    SỐ 2B ĐƯỜNG BẠCH ĐẰNG, PHƯỜNG HẠ LÝ,<br>
+                    QUẬN HỒNG BÀNG (CŨ), TP. HẢI PHÒNG
+                </p>
+                <!-- Nút xem bản đồ (thay đổi sau) -->
+                <button onclick="window.open('https://maps.app.goo.gl/example-address', '_blank')"
+                        class="mt-3 inline-flex items-center px-4 py-2 border border-accent text-sm font-medium rounded-full text-accent hover:bg-accent hover:text-white transition duration-300">
+                    Xem Bản Đồ
+                </button>
+            </div>
+
+        </div>
+        
+        <div class="h-0.5 w-full bg-accent opacity-50 mx-auto mt-8 mb-6"></div>
+
+        <!-- Lời mời kết thúc -->
+        <div class="text-center mt-6">
+            <p class="text-base italic text-gray-700 mb-3">
+                Sự hiện diện của Đồng chí là niềm vinh dự của buổi gặp mặt.
+            </p>
+            <p class="font-serif-display text-2xl font-bold text-accent">
+                XIN TRÂN TRỌNG KÍNH MỜI!
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Phần Phản hồi (Ví dụ đơn giản, bạn có thể mở rộng) -->
+    <div class="w-full max-w-lg md:max-w-2xl text-center p-4">
+        <button id="rsvp-button"
+                class="btn-rsvp bg-accent text-white font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out uppercase tracking-wider shadow-lg">
+            Phản Hồi (RSVP)
+        </button>
+        <p id="rsvp-message" class="text-sm text-gray-300 mt-3 hidden">
+            Cảm ơn Đồng chí đã phản hồi!
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rsvpButton = document.getElementById('rsvp-button');
+            const rsvpMessage = document.getElementById('rsvp-message');
+
+            // Hàm đơn giản hóa cho việc phản hồi (RSVP)
+            rsvpButton.addEventListener('click', () => {
+                // Trong ứng dụng thực tế, bạn có thể tích hợp Firestore hoặc một dịch vụ khác ở đây.
+                console.log("Đã nhận phản hồi RSVP.");
+                
+                // Hiển thị thông báo đã phản hồi
+                rsvpButton.classList.add('hidden');
+                rsvpMessage.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
